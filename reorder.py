@@ -10,6 +10,7 @@ with open(input_name, 'rb') as readfile:
     input_pdf = PdfFileReader(readfile)
     total_pages = input_pdf.getNumPages()
     
+    # reverse file orders and also rotate counter-clockwise each page 90 degrees. 
     for page in range(total_pages - 1, -1, -1):
         pdf_page = input_pdf.getPage(page)
         pdf_page.rotateClockwise(270)

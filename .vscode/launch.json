@@ -6,7 +6,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "args" : ["1.pdf", "2.pdf"],
+            "args" : ["sample.pdf", "output.pdf"],
             "console": "integratedTerminal"
         }
     ]

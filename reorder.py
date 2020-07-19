@@ -1,11 +1,15 @@
 import sys
+import os
 from PyPDF2 import PdfFileWriter, PdfFileReader
 
 
 def main():        
-    output_pdf = PdfFileWriter()
+    if len(sys.argv) < 2:
+        print("Usage: ", os.path.basename(__file__), "input_pdf output_pdf")
+        return
     input_name = sys.argv[1]
     output_name = sys.argv[2]
+    output_pdf = PdfFileWriter()
 
     with open(input_name, 'rb') as readfile:
         input_pdf = PdfFileReader(readfile)
